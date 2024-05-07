@@ -1,0 +1,78 @@
+<mat-card>
+    <div>
+        <h1>Detalhes Empresa</h1>
+    </div>
+    
+    <div *ngIf="empresa"> 
+        <form>
+    
+    
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Razão Social:</mat-label>
+                <input matInput type="text" value="{{empresa.razaoSocial}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Nome Fantasia:</mat-label>
+                <input matInput type="text" value="{{empresa.nomeFantasia}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>CPNJ:</mat-label>
+                <input matInput type="text" value="{{empresa.cnpjEmpresa}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Telefone:</mat-label>
+                <input matInput type="text" value="{{empresa.telefoneEmpresa}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Endereço:</mat-label>
+                <input matInput type="text" value="{{empresa.enderecoEmpresa}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Cidade:</mat-label>
+                <input matInput type="text" value="{{empresa.cidadeEmpresa}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Uf:</mat-label>
+                <input  matInput type="text" value="{{empresa.ufEmpresa}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Cep:</mat-label>
+                    <input matInput type="text" value="{{empresa.cepEmpresa}}" disabled>
+                </mat-form-field>
+                </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>País:</mat-label>
+                    <input matInput type="text" value="{{empresa.paisEmpresa}}" disabled>
+                </mat-form-field>
+                </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Email:</mat-label>
+                <input matInput type="text" value="{{empresa.emailEmpresa}}" disabled>
+            </mat-form-field>
+            </div>
+           
+    
+            <div class="btn-box">
+                <button routerLink="/empresa" mat-raised-button>Voltar</button>
+            </div>
+    
+        </form>
+    </div>
+    </mat-card>

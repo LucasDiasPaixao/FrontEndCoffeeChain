@@ -1,0 +1,69 @@
+<app-home></app-home>
+<mat-card>
+    <div class="empresa-box">
+    
+    
+        <button routerLink="/empresa/cadastro" mat-raised-button color="primary">Cadastrar nova Empresa</button>
+    
+        <div class="input-box">
+            <mat-form-field>
+            <mat-label>Procurar:</mat-label>
+            <input matInput type="text" placeholder="Qual registro está procurando"  (input)="search($event)">
+            </mat-form-field>
+        </div>
+    </div>
+    <section class="example-container mat-elevation-z8" tabindex="0">
+    <table mat-table [dataSource]="empresa">
+    
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="Imagem">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let empresa"><img src="assets/images/usuario.png" alt="" style="height: 20px; width: 20px;"></td>
+        </ng-container>
+      
+        <ng-container matColumnDef="empresaId">
+          <th mat-header-cell *matHeaderCellDef>Empresa Id</th>
+          <td mat-cell *matCellDef="let empresa"> {{empresa.empresaId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="RazaoSocial">
+          <th mat-header-cell *matHeaderCellDef>Razão Social</th>
+          <td mat-cell *matCellDef="let empresa"> {{empresa.razaoSocial}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="CidadeEmpresa">
+          <th mat-header-cell *matHeaderCellDef>Cidade</th>
+          <td mat-cell *matCellDef="let empresa"> {{empresa.cidadeEmpresa}} </td>
+        </ng-container>
+        <ng-container matColumnDef="UfEmpresa">
+            <th mat-header-cell *matHeaderCellDef>Uf</th>
+            <td mat-cell *matCellDef="let empresa"> {{empresa.ufEmpresa}} </td>
+          </ng-container>
+          
+        <ng-container matColumnDef="EmailEmpresa">
+            <th mat-header-cell *matHeaderCellDef>Email</th>
+            <td mat-cell *matCellDef="let empresa"> {{empresa.emailEmpresa}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="AcoesEmpresa">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let empresa">
+                <button routerLink="editar/{{empresa.empresaId}}" mat-raised-button color="accent">Editar</button>
+                <button routerLink="detalhes/{{empresa.empresaId}}" mat-raised-button>Detalhes</button>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="ExcluirEmpresa">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let empresa">
+                <button mat-raised-button color="warn" (click)="openDialog(empresa.empresaId)">Excluir</button>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+        <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
+      </table>
+    </section>
+    </mat-card>

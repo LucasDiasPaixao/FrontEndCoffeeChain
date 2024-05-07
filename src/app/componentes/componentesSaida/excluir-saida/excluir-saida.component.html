@@ -1,0 +1,16 @@
+<mat-card>
+    <div *ngIf="saida">
+        <h1 style="text-align: center;">Deseja confirmar a Exclusão?</h1>
+        <div>
+            <h1 style="font-style: bold;">Produtor:</h1>
+            <h2 style="font-style: bold;">{{produtor?.nomeProdutor}}</h2>
+            <h1 style="font-style: bold;">Código da entrada:</h1>
+            <h2>{{saida.entradaId}}</h2>
+        </div>
+    
+        <div>
+            <button (click)="Excluir()" mat-raised-button color="warn">Excluir</button>
+            <button (click)="Cancelar()" mat-raised-button>Voltar</button>
+        </div>
+    </div>
+</mat-card>

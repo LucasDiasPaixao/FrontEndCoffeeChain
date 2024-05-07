@@ -1,0 +1,96 @@
+
+<mat-card>
+<h1>{{btnTitulo}}</h1>
+<form [formGroup]="produtorForm" (ngSubmit)="submit()" #formDit="ngForm">
+    <input type="hidden" formControlName="produtorId">
+    
+    <div class="input-box">
+        <mat-form-field>
+            <mat-label for="">Nome:</mat-label>
+            <input matInput type="text" formControlName="nomeProdutor" placeholder="Insira um nome">
+        </mat-form-field>
+    </div>
+    <div class="input-box">
+        <mat-form-field>
+            <mat-label for="">CPF:</mat-label>
+            <input matInput type="text" formControlName="cpfProdutor" placeholder="Insira um Cpf">
+        </mat-form-field>
+    </div>
+    <div class="input-box">
+        <mat-form-field>
+            <mat-label for="">Rg:</mat-label>
+            <input matInput type="text" formControlName="rgProdutor" placeholder="Insira um Rg">
+        </mat-form-field>
+    </div>
+    <div class="input-box">
+        <mat-form-field>
+            <mat-label for="">Telefone:</mat-label>
+            <input matInput type="text" formControlName="telefoneProdutor" placeholder="Insira um Telefone">
+        </mat-form-field>
+    </div>
+    <div class="input-box">
+        <mat-form-field>
+            <mat-label for="">Endereço:</mat-label>
+            <input matInput type="text" formControlName="enderecoProdutor" placeholder="Insira um Endereço">
+        </mat-form-field>
+    </div>
+    <div class="input-box">
+        <mat-form-field>
+            <mat-label for="">Cidade:</mat-label>
+            <input matInput type="text" formControlName="cidadeProdutor" placeholder="Insira uma Cidade">
+        </mat-form-field>
+    </div>
+
+    <div class="input-box">
+        <mat-form-field>
+        <mat-label for="">Uf:</mat-label>
+        <mat-select id="uf" formControlName="ufProdutor" required>
+            <mat-option value="AC">AC</mat-option>
+            <mat-option value="AL">AL</mat-option>
+            <mat-option value="AP">AP</mat-option>
+            <mat-option value="AM">AM</mat-option>
+            <mat-option value="BA">BA</mat-option>
+            <mat-option value="CE">CE</mat-option>
+            <mat-option value="DF">DF</mat-option>
+            <mat-option value="ES">ES</mat-option>
+            <mat-option value="GO">GO</mat-option>
+            <mat-option value="MA">MA</mat-option>
+            <mat-option value="MT">MT</mat-option>
+            <mat-option value="MS">MS</mat-option>
+            <mat-option value="MG">MG</mat-option>
+            <mat-option value="PA">PA</mat-option>
+            <mat-option value="PB">PB</mat-option>
+            <mat-option value="PR">PR</mat-option>
+            <mat-option value="PE">PE</mat-option>
+            <mat-option value="PI">PI</mat-option>
+            <mat-option value="RJ">RJ</mat-option>
+            <mat-option value="RN">RN</mat-option>
+            <mat-option value="RS">RS</mat-option>
+            <mat-option value="RO">RO</mat-option>
+            <mat-option value="RR">RR</mat-option>
+            <mat-option value="SC">SC</mat-option>
+            <mat-option value="SP">SP</mat-option>
+            <mat-option value="SE">SE</mat-option>
+            <mat-option value="TO">TO</mat-option>
+        </mat-select>
+    </mat-form-field>
+    </div>
+    <div class="input-box">
+        <mat-form-field>
+            <mat-label for="">Email:</mat-label>
+            <input matInput type="text" formControlName="emailProdutor" placeholder="Insira um Email">
+        </mat-form-field>
+    </div>
+    <div class="input-box">
+        <mat-form-field>
+            <mat-label for="">Cep:</mat-label>
+            <input matInput type="text" formControlName="cepProdutor" placeholder="Insira um Cep">
+        </mat-form-field>
+    </div>
+    
+    <div class="btn-box">
+        <button type="submit" [disabled]="!produtorForm.valid" mat-raised-button color="accent">{{btnAcao}}</button>
+        <button routerLink="/produtor" mat-raised-button>Voltar</button>
+    </div>
+</form>
+</mat-card>

@@ -1,0 +1,16 @@
+<mat-card>
+    <div *ngIf="armazem">
+        <h1 style="text-align: center;">Deseja confirmar a Exclusão?</h1>
+        <div>
+            <h1 style="font-style: bold;">Telefone:</h1>
+            <h2 style="font-style: bold;">{{armazem.telefoneArmazem}}</h2>
+            <h1 style="font-style: bold;">Email:</h1>
+            <h2>{{armazem.emailArmazem}}</h2>
+        </div>
+    
+        <div>
+            <button (click)="Excluir()" mat-raised-button color="warn">Excluir</button>
+            <button (click)="Cancelar()" mat-raised-button>Voltar</button>
+        </div>
+    </div>
+</mat-card>

@@ -1,0 +1,82 @@
+<mat-card>
+    <div>
+        <h1>Detalhes Saída</h1>
+    </div>
+    
+    <div *ngIf="saida"> 
+        <form>
+
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Produtor:</mat-label>
+                <input matInput type="text" value="{{produtor.nomeProdutor}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Propriedade:</mat-label>
+                <input matInput type="text" value="{{propriedade.nomeFazenda}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Empresa:</mat-label>
+                <input matInput type="text" value="{{empresa.nomeFantasia}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Código do Lote (Entrada):</mat-label>
+                    <input matInput type="text" value="{{entrada.codigoLote}}" disabled>
+                </mat-form-field>
+                </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Data de Saída:</mat-label>
+                <input matInput type="text" value="{{saida.dataSaida | date: 'dd/MM/yy' }}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Quantidade de Sacas:</mat-label>
+                    <input matInput type="text" value="{{saida.qtdSacas}}" disabled>
+                </mat-form-field>
+                </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Tipo de Saída:</mat-label>
+                <input matInput type="text" value="{{saida.tipoSaida}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Preço de Saída:</mat-label>
+                <input  matInput type="text" value="{{saida.precoSaida}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Custo de saida:</mat-label>
+                    <input matInput type="text" value="{{saida.custoSaida}}" disabled>
+                </mat-form-field>
+                </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Nota Fiscal Eletrônica:</mat-label>
+                    <input matInput type="text" value="{{saida.nfeSaida}}" disabled>
+                </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Embalagem de Saída:</mat-label>
+                    <input matInput type="text" value="{{saida.embalagemSaida}}" disabled>
+                </mat-form-field>
+            </div>
+    
+            <div class="btn-box">
+                <button routerLink="/saida" mat-raised-button>Voltar</button>
+            </div>
+    
+        </form>
+    </div>
+    </mat-card>

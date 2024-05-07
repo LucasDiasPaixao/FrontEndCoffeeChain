@@ -1,0 +1,106 @@
+<mat-card>
+    <h1>{{btnTitulo}}</h1>
+    <form [formGroup]="propriedadeForm" (ngSubmit)="submit()" #formDit="ngForm">
+        <input type="hidden" formControlName="propriedadeId">
+        
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Produtor:</mat-label>
+                <mat-select formControlName="produtorId">
+                  <mat-option *ngFor="let produtor of produtores" [value]="produtor.produtorId">
+                    {{produtor.nomeProdutor}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Nome Fazenda:</mat-label>
+                <input matInput type="text" formControlName="nomeFazenda" placeholder="Insira um Nome para Fazenda">
+            </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">CNPJ:</mat-label>
+                <input matInput type="text" formControlName="cnpjFazenda" placeholder="Insira um CNPJ">
+            </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Inscrição Estadual:</mat-label>
+                <input matInput type="text" formControlName="inscEstadual" placeholder="Insira uma Insc Estadual">
+            </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Telefone:</mat-label>
+                <input matInput type="text" formControlName="telefonePropriedade" placeholder="Insira um Telefone">
+            </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Endereço:</mat-label>
+                <input matInput type="text" formControlName="enderecoPropriedade" placeholder="Insira um Endereço">
+            </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Cidade:</mat-label>
+                <input matInput type="text" formControlName="cidadePropriedade" placeholder="Insira uma Cidade">
+            </mat-form-field>
+        </div>
+    
+        <div class="input-box">
+            <mat-form-field>
+            <mat-label for="">Uf:</mat-label>
+            <mat-select id="uf" formControlName="ufPropriedade" required>
+                <mat-option value="AC">AC</mat-option>
+                <mat-option value="AL">AL</mat-option>
+                <mat-option value="AP">AP</mat-option>
+                <mat-option value="AM">AM</mat-option>
+                <mat-option value="BA">BA</mat-option>
+                <mat-option value="CE">CE</mat-option>
+                <mat-option value="DF">DF</mat-option>
+                <mat-option value="ES">ES</mat-option>
+                <mat-option value="GO">GO</mat-option>
+                <mat-option value="MA">MA</mat-option>
+                <mat-option value="MT">MT</mat-option>
+                <mat-option value="MS">MS</mat-option>
+                <mat-option value="MG">MG</mat-option>
+                <mat-option value="PA">PA</mat-option>
+                <mat-option value="PB">PB</mat-option>
+                <mat-option value="PR">PR</mat-option>
+                <mat-option value="PE">PE</mat-option>
+                <mat-option value="PI">PI</mat-option>
+                <mat-option value="RJ">RJ</mat-option>
+                <mat-option value="RN">RN</mat-option>
+                <mat-option value="RS">RS</mat-option>
+                <mat-option value="RO">RO</mat-option>
+                <mat-option value="RR">RR</mat-option>
+                <mat-option value="SC">SC</mat-option>
+                <mat-option value="SP">SP</mat-option>
+                <mat-option value="SE">SE</mat-option>
+                <mat-option value="TO">TO</mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Email:</mat-label>
+                <input matInput type="text" formControlName="emailPropriedade" placeholder="Insira um Email">
+            </mat-form-field>
+        </div>  
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Cep:</mat-label>
+                <input matInput type="text" formControlName="cepPropriedade" placeholder="Insira um Cep">
+            </mat-form-field>
+        </div>
+          
+    
+        <div class="btn-box">
+            <button type="submit" [disabled]="!propriedadeForm.valid" mat-raised-button color="accent">{{btnAcao}}</button>
+            <button routerLink="/propriedade" mat-raised-button>Voltar</button>
+        </div>
+    </form>
+    </mat-card>

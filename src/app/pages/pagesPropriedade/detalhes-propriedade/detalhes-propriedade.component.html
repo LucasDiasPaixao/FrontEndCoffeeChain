@@ -1,0 +1,76 @@
+<mat-card>
+    <div>
+        <h1>Detalhes Propriedade</h1>
+    </div>
+    
+    <div *ngIf="propriedade"> 
+        <form>
+
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Produtor:</mat-label>
+                <input matInput type="text" value="{{produtor.nomeProdutor}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Nome Fantasia:</mat-label>
+                <input matInput type="text" value="{{propriedade.nomeFazenda}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>CPNJ:</mat-label>
+                <input matInput type="text" value="{{propriedade.cnpjFazenda}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Inscrição Estadual:</mat-label>
+                    <input matInput type="text" value="{{propriedade.inscEstadual}}" disabled>
+                </mat-form-field>
+                </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Telefone:</mat-label>
+                <input matInput type="text" value="{{propriedade.telefonePropriedade}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Endereço:</mat-label>
+                <input matInput type="text" value="{{propriedade.enderecoPropriedade}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Cidade:</mat-label>
+                <input matInput type="text" value="{{propriedade.cidadePropriedade}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Uf:</mat-label>
+                <input  matInput type="text" value="{{propriedade.ufPropriedade}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Email:</mat-label>
+                    <input matInput type="text" value="{{propriedade.emailPropriedade}}" disabled>
+                </mat-form-field>
+                </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Cep:</mat-label>
+                    <input matInput type="text" value="{{propriedade.cepPropriedade}}" disabled>
+                </mat-form-field>
+                </div>
+    
+            <div class="btn-box">
+                <button routerLink="/propriedade" mat-raised-button>Voltar</button>
+            </div>
+    
+        </form>
+    </div>
+    </mat-card>

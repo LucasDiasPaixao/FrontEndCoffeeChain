@@ -1,0 +1,6 @@
+<div *ngIf="produtor">
+    <app-produtor-form [btnAcao]="btnAcao" 
+                       [btnTitulo]="btnTitulo" 
+                       [dadosProdutor]="produtor" 
+                       (onSubmit)="editarProdutor($event)"></app-produtor-form>
+</div>

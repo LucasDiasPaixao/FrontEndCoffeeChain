@@ -1,0 +1,106 @@
+<mat-card>
+    <div>
+        <h1>Detalhes Entrada</h1>
+    </div>
+    
+    <div *ngIf="entrada"> 
+        <form>
+
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Produtor:</mat-label>
+                <input matInput type="text" value="{{produtor.nomeProdutor}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Propriedade:</mat-label>
+                <input matInput type="text" value="{{propriedade.nomeFazenda}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Empresa:</mat-label>
+                <input matInput type="text" value="{{empresa.nomeFantasia}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Armazém:</mat-label>
+                    <input matInput type="text" value="{{armazem.armazemId}}" disabled>
+                </mat-form-field>
+                </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Data de Entrada:</mat-label>
+                <input matInput type="text" value="{{entrada.dataEntrada | date: 'dd/MM/yy' }}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Código do Lote:</mat-label>
+                <input matInput type="text" value="{{entrada.codigoLote}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Quantidade de Sacas:</mat-label>
+                <input matInput type="text" value="{{entrada.qtdSacas}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Preço do Lote:</mat-label>
+                <input  matInput type="text" value="{{entrada.precoLote}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Custo de entrada:</mat-label>
+                    <input matInput type="text" value="{{entrada.custoEntrada}}" disabled>
+                </mat-form-field>
+                </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Nota Fiscal Eletrônica:</mat-label>
+                    <input matInput type="text" value="{{entrada.nfeEntrada}}" disabled>
+                </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Tipo de Entrada:</mat-label>
+                    <input matInput type="text" value="{{entrada.tipoEntrada}}" disabled>
+                </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Safra:</mat-label>
+                    <input matInput type="text" value="{{entrada.safra}}" disabled>
+                </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Tipo de Café:</mat-label>
+                    <input matInput type="text" value="{{entrada.tipoCafe}}" disabled>
+                </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Local Armazenado:</mat-label>
+                    <input matInput type="text" value="{{entrada.localArmazenado}}" disabled>
+                </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Embalagem Armazenado:</mat-label>
+                    <input matInput type="text" value="{{entrada.embalagemArmazenado}}" disabled>
+                </mat-form-field>
+            </div>
+    
+            <div class="btn-box">
+                <button routerLink="/entrada" mat-raised-button>Voltar</button>
+            </div>
+    
+        </form>
+    </div>
+    </mat-card>

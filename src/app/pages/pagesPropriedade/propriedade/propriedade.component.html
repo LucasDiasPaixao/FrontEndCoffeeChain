@@ -1,0 +1,74 @@
+<app-home></app-home>
+<mat-card>
+    <div class="propriedade-box">
+    
+    
+        <button routerLink="/propriedade/cadastro" mat-raised-button color="primary">Cadastrar nova Propriedade</button>
+    
+        <div class="input-box">
+            <mat-form-field>
+            <mat-label>Procurar:</mat-label>
+            <input matInput type="text" placeholder="Qual registro está procurando"  (input)="search($event)">
+            </mat-form-field>
+        </div>
+    </div>
+    <section class="example-container mat-elevation-z8" tabindex="0">
+    <table mat-table [dataSource]="propriedade">
+    
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="Imagem">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let propriedade"><img src="assets/images/usuario.png" alt="" style="height: 20px; width: 20px;"></td>
+        </ng-container>
+
+        <ng-container matColumnDef="propriedadeId">
+          <th mat-header-cell *matHeaderCellDef>Propriedade Id</th>
+          <td mat-cell *matCellDef="let propriedade"> {{propriedade.propriedadeId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="produtor">
+          <th mat-header-cell *matHeaderCellDef>Produtor Id</th>
+          <td mat-cell *matCellDef="let propriedade"> {{propriedade.produtorId}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nomeFazenda">
+            <th mat-header-cell *matHeaderCellDef>Nome Fantasia</th>
+            <td mat-cell *matCellDef="let propriedade"> {{propriedade.nomeFazenda}} </td>
+          </ng-container>
+      
+        <ng-container matColumnDef="cnpjFazenda">
+          <th mat-header-cell *matHeaderCellDef>CNPJ</th>
+          <td mat-cell *matCellDef="let propriedade"> {{propriedade.cnpjFazenda}} </td>
+        </ng-container>
+        <ng-container matColumnDef="ufPropriedade">
+            <th mat-header-cell *matHeaderCellDef>Uf</th>
+            <td mat-cell *matCellDef="let propriedade"> {{propriedade.ufPropriedade}} </td>
+          </ng-container>
+          
+        <ng-container matColumnDef="telefonePropriedade">
+            <th mat-header-cell *matHeaderCellDef>Telefone</th>
+            <td mat-cell *matCellDef="let propriedade"> {{propriedade.telefonePropriedade}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="AcoesPropriedade">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let propriedade">
+                <button routerLink="editar/{{propriedade.propriedadeId}}" mat-raised-button color="accent">Editar</button>
+                <button routerLink="detalhes/{{propriedade.propriedadeId}}" mat-raised-button>Detalhes</button>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="ExcluirPropriedade">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let propriedade">
+                <button mat-raised-button color="warn" (click)="openDialog(propriedade.propriedadeId)">Excluir</button>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="colunas"></tr>
+        <tr mat-row *matRowDef="let row; columns: colunas;"></tr>
+      </table>
+    </section>
+  </mat-card>

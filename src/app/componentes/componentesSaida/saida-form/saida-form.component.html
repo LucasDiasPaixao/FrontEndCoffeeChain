@@ -1,0 +1,89 @@
+<mat-card>
+    <h1>{{btnTitulo}}</h1>
+    <form [formGroup]="saidaForm" (ngSubmit)="submit()" #formDit="ngForm">
+        <input type="hidden" formControlName="entradaId">
+  
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Produtor:</mat-label>
+                <mat-select formControlName="destinoProdutorId">
+                  <mat-option *ngFor="let produtor of produtores" [value]="produtor.produtorId">
+                    {{produtor.nomeProdutor}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Propriedade:</mat-label>
+                <mat-select formControlName="destinoPropriedadeId">
+                  <mat-option *ngFor="let propriedade of propriedades" [value]="propriedade.propriedadeId">
+                    {{propriedade.nomeFazenda}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Empresa:</mat-label>
+                <mat-select formControlName="destinoEmpresaId">
+                  <mat-option *ngFor="let empresa of empresas" [value]="empresa.empresaId">
+                    {{empresa.nomeFantasia}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Entrada:</mat-label>
+                <mat-select formControlName="entradaId">
+                  <mat-option *ngFor="let entrada of entradas" [value]="entrada.entradaId">
+                    {{entrada.entradaId}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Quantidade de Sacas:</mat-label>
+                <input matInput type="text" formControlName="qtdSacas" placeholder="Insira a Quantidade de Sacas">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Tipo de Saida:</mat-label>
+                <input matInput type="text" formControlName="tipoSaida" placeholder="Insira o Tipo de Saida">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Preço do lote:</mat-label>
+                <input matInput type="text" formControlName="precoSaida" placeholder="Insira o Preço do lote de saida">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Custo da saida:</mat-label>
+                <input matInput type="text" formControlName="custoSaida" placeholder="Insira o Custo da saida">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Nota fiscal de saida:</mat-label>
+                <input matInput type="text" formControlName="nfeSaida" placeholder="Insira a Nota fiscal de saida">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Embalagem de saida:</mat-label>
+                <input matInput type="text" formControlName="embalagemSaida" placeholder="Insira a Embalagem de saida">
+            </mat-form-field>
+        </div> 
+          
+    
+        <div class="btn-box">
+            <button type="submit" [disabled]="!saidaForm.valid" mat-raised-button color="accent">{{btnAcao}}</button>
+            <button routerLink="/saida" mat-raised-button>Voltar</button>
+        </div>
+    </form>
+</mat-card>

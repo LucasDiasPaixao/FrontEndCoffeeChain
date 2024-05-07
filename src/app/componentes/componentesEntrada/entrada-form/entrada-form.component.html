@@ -1,0 +1,113 @@
+<mat-card> 
+    <h1>{{btnTitulo}}</h1>
+    <form [formGroup]="entradaForm" (ngSubmit)="submit()" #formDit="ngForm">
+        <input type="hidden" formControlName="entradaId">
+  
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Produtor:</mat-label>
+                <mat-select formControlName="produtorId">
+                  <mat-option *ngFor="let produtor of produtores" [value]="produtor.produtorId">
+                    {{produtor.nomeProdutor}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Propriedade:</mat-label>
+                <mat-select formControlName="propriedadeId">
+                  <mat-option *ngFor="let propriedade of propriedades" [value]="propriedade.propriedadeId">
+                    {{propriedade.nomeFazenda}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Empresa:</mat-label>
+                <mat-select formControlName="empresaId">
+                  <mat-option *ngFor="let empresa of empresas" [value]="empresa.empresaId">
+                    {{empresa.nomeFantasia}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label>Armazém:</mat-label>
+                <mat-select formControlName="armazemId">
+                  <mat-option *ngFor="let armazem of armazens" [value]="armazem.armazemId">
+                    {{armazem.armazemId}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Codigo de lote:</mat-label>
+                <input matInput type="text" formControlName="codigoLote" placeholder="Insira um Codigo de lote">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Quantidade de Sacas:</mat-label>
+                <input matInput type="text" formControlName="qtdSacas" placeholder="Insira a Quantidade de Sacas">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Preço do lote:</mat-label>
+                <input matInput type="text" formControlName="precoLote" placeholder="Insira o Preço do lote">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Custo da entrada:</mat-label>
+                <input matInput type="text" formControlName="custoEntrada" placeholder="Insira o Custo da entrada">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Nota fiscal de entrada:</mat-label>
+                <input matInput type="text" formControlName="nfeEntrada" placeholder="Insira a Nota fiscal de entrada">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Tipo da entrada:</mat-label>
+                <input matInput type="text" formControlName="tipoEntrada" placeholder="Insira o Tipo da entrada">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Safra:</mat-label>
+                <input matInput type="text" formControlName="safra" placeholder="Insira a Safra">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Tipo do café:</mat-label>
+                <input matInput type="text" formControlName="tipoCafe" placeholder="Insira o Tipo do café">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Local armazenado:</mat-label>
+                <input matInput type="text" formControlName="localArmazenado" placeholder="Insira o Local armazenado">
+            </mat-form-field>
+        </div> 
+        <div class="input-box">
+            <mat-form-field>
+                <mat-label for="">Embalagem armazenada:</mat-label>
+                <input matInput type="text" formControlName="embalagemArmazenado" placeholder="Insira a Embalagem armazenada">
+            </mat-form-field>
+        </div> 
+          
+    
+        <div class="btn-box">
+            <button type="submit" [disabled]="!entradaForm.valid" mat-raised-button color="accent">{{btnAcao}}</button>
+            <button routerLink="/entrada" mat-raised-button>Voltar</button>
+        </div>
+    </form>
+</mat-card>

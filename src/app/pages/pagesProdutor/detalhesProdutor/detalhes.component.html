@@ -1,0 +1,71 @@
+<mat-card>
+<div>
+    <h1>Detalhes Produtor</h1>
+</div>
+
+<div *ngIf="produtor"> 
+    <form>
+
+
+        <div class="input-box">
+        <mat-form-field>
+            <mat-label>Nome:</mat-label>
+            <input matInput type="text" value="{{produtor.nomeProdutor}}" disabled>
+        </mat-form-field>
+        </div>
+        <div class="input-box">
+        <mat-form-field>
+            <mat-label>Cpf:</mat-label>
+            <input matInput type="text" value="{{produtor.cpfProdutor}}" disabled>
+        </mat-form-field>
+        </div>
+        <div class="input-box">
+        <mat-form-field>
+            <mat-label>Rg:</mat-label>
+            <input matInput type="text" value="{{produtor.rgProdutor}}" disabled>
+        </mat-form-field>
+        </div>
+        <div class="input-box">
+        <mat-form-field>
+            <mat-label>Telefone:</mat-label>
+            <input matInput type="text" value="{{produtor.telefoneProdutor}}" disabled>
+        </mat-form-field>
+        </div>
+        <div class="input-box">
+        <mat-form-field>
+            <mat-label>Endereço:</mat-label>
+            <input matInput type="text" value="{{produtor.enderecoProdutor}}" disabled>
+        </mat-form-field>
+        </div>
+        <div class="input-box">
+        <mat-form-field>
+            <mat-label>Cidade:</mat-label>
+            <input matInput type="text" value="{{produtor.cidadeProdutor}}" disabled>
+        </mat-form-field>
+        </div>
+        <div class="input-box">
+        <mat-form-field>
+            <mat-label>Uf:</mat-label>
+            <input  matInput type="text" value="{{produtor.ufProdutor}}" disabled>
+        </mat-form-field>
+        </div>
+        <div class="input-box">
+        <mat-form-field>
+            <mat-label>Email:</mat-label>
+            <input matInput type="text" value="{{produtor.emailProdutor}}" disabled>
+        </mat-form-field>
+        </div>
+        <div class="input-box">
+        <mat-form-field>
+            <mat-label>Cep:</mat-label>
+            <input matInput type="text" value="{{produtor.cepProdutor}}" disabled>
+        </mat-form-field>
+        </div>
+
+        <div class="btn-box">
+            <button routerLink="/produtor" mat-raised-button>Voltar</button>
+        </div>
+
+    </form>
+</div>
+</mat-card>

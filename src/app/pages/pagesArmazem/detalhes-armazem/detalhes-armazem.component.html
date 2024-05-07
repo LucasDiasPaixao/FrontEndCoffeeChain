@@ -1,0 +1,52 @@
+<mat-card>
+    <div>
+        <h1>Detalhes Armazém</h1>
+    </div>
+    
+    <div *ngIf="armazem"> 
+        <form>
+
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Empresa:</mat-label>
+                    <input matInput type="text" value="{{empresa.nomeFantasia}}" disabled>
+                </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Telefone:</mat-label>
+                <input matInput type="text" value="{{armazem.telefoneArmazem}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Endereço:</mat-label>
+                <input matInput type="text" value="{{armazem.enderecoArmazem}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Cidade:</mat-label>
+                <input matInput type="text" value="{{armazem.cidadeArmazem}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+            <mat-form-field>
+                <mat-label>Uf:</mat-label>
+                <input  matInput type="text" value="{{armazem.ufArmazem}}" disabled>
+            </mat-form-field>
+            </div>
+            <div class="input-box">
+                <mat-form-field>
+                    <mat-label>Email:</mat-label>
+                    <input matInput type="text" value="{{armazem.emailArmazem}}" disabled>
+                </mat-form-field>
+                </div>
+    
+            <div class="btn-box">
+                <button routerLink="/armazem" mat-raised-button>Voltar</button>
+            </div>
+    
+        </form>
+    </div>
+    </mat-card>

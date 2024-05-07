@@ -1,0 +1,7 @@
+<div *ngIf="armazem
+">
+    <app-armazem-form [btnAcao]="btnAcao" 
+                       [btnTitulo]="btnTitulo" 
+                       [dadosArmazem]="armazem" 
+                       (onSubmit)="editarArmazem($event)"></app-armazem-form>
+</div>

@@ -1,0 +1,26 @@
+.propriedade-box {
+    width: 100%;
+    gap: 15px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin-bottom: 2rem;
+}
+
+.example-container {
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+}
+
+.example-container::-webkit-scrollbar{
+    width: 10px;
+    background-color: #9fa8da;
+    border-radius: 10px;
+}
+
+.example-container::-webkit-scrollbar-thumb{
+    background-color: #7986cb;
+    border-radius: 10px;
+}

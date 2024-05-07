@@ -1,0 +1,16 @@
+<mat-card>
+    <div *ngIf="propriedade">
+        <h1 style="text-align: center;">Deseja confirmar a Exclusão?</h1>
+        <div>
+            <h1 style="font-style: bold;">Propriedade:</h1>
+            <h2 style="font-style: bold;">{{propriedade.nomeFazenda}}</h2>
+            <h1 style="font-style: bold;">CNPJ:</h1>
+            <h2>{{propriedade.cnpjFazenda}}</h2>
+        </div>
+    
+        <div>
+            <button (click)="Excluir()" mat-raised-button color="warn">Excluir</button>
+            <button (click)="Cancelar()" mat-raised-button>Voltar</button>
+        </div>
+    </div>
+</mat-card>
